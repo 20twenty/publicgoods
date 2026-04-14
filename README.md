@@ -33,10 +33,16 @@ Register at [https://fred.stlouisfed.org/docs/api/api_key.html](https://fred.stl
 **2. Install**
 
 ```bash
-git clone https://github.com/bradybenware/fred-skill
+npx skills add 20twenty/publicgoods
 ```
 
-Claude Code automatically loads skills from `.claude/skills/`. Open the project in Claude Code and the skill is active.
+This installs the skill into `.claude/skills/` in your current project. Open the project in Claude Code and the skill is active.
+
+Alternatively, clone manually:
+
+```bash
+git clone https://github.com/20twenty/publicgoods
+```
 
 **3. Launch Claude with your API key**
 
