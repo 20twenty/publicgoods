@@ -72,6 +72,10 @@ Just talk to Claude. You don't need to know FRED series IDs, API parameters, or 
 
 [→ See example output](examples/example-grocery-bills-vs-cpi.md)
 
+> What sectors have seen the strongest employment growth in the last 5 years? Are there any surprises?
+
+[→ See example output](examples/example-sector-employment-growth.md)
+
 ### More prompts to try
 
 **Broad, exploratory:**
@@ -87,8 +91,6 @@ Just talk to Claude. You don't need to know FRED series IDs, API parameters, or 
 > Compare US unemployment and inflation over the last 20 years. Where are the major turning points and what caused them?
 
 > How has real wage growth compared to productivity growth since 1980? Pull the data and help me understand the gap.
-
-> What sectors have seen the strongest employment growth in the last 5 years? Are there any surprises?
 
 **Specific and technical:**
 
