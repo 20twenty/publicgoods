@@ -7,7 +7,7 @@ description: Query the St. Louis Fed (FRED) economic data API. Use this skill to
 
 This skill gives you direct access to the Federal Reserve Bank of St. Louis (FRED) API via a local Node.js CLI — no MCP server required.
 
-The CLI lives at `scripts/cli.js` (relative to this skill directory). It requires Node 18+ (for built-in `fetch`). No npm install needed.
+The CLI lives at `<SKILL_DIR>/scripts/cli.js`. Replace `<SKILL_DIR>` with the absolute path to this skill's base directory (sometimes shown in the **Base directory** header when the skill loads). It requires Node 18+ (for built-in `fetch`). No npm install needed.
 
 ## About FRED
 
@@ -29,10 +29,10 @@ FRED hosts over 800,000 economic time series from ~100 sources — BLS, BEA, Cen
 Use this when you have a topic or concept but don't know the series ID. Sort by `popularity` to surface the most-used series first — for common indicators, the top result is usually what you want.
 
 ```bash
-node ./scripts/cli.js search --text "unemployment rate" --limit 10
-node ./scripts/cli.js search --text "CPI" --order-by popularity --sort desc --limit 5
-node ./scripts/cli.js search --text "GDP" --type series_id
-node ./scripts/cli.js search --tags "monthly,nsa" --limit 20
+node <SKILL_DIR>/scripts/cli.js search --text "unemployment rate" --limit 10
+node <SKILL_DIR>/scripts/cli.js search --text "CPI" --order-by popularity --sort desc --limit 5
+node <SKILL_DIR>/scripts/cli.js search --text "GDP" --type series_id
+node <SKILL_DIR>/scripts/cli.js search --tags "monthly,nsa" --limit 20
 ```
 
 **Options:**
@@ -58,10 +58,10 @@ node ./scripts/cli.js search --tags "monthly,nsa" --limit 20
 Use this once you have a series ID. By default returns the full history in ascending date order. Use `--start`/`--end` to narrow the window, `--sort desc --limit N` to get the most recent N observations, and `--units`/`--frequency` to apply transformations server-side.
 
 ```bash
-node ./scripts/cli.js get-series --id GDP
-node ./scripts/cli.js get-series --id UNRATE --start 2020-01-01 --end 2024-12-31
-node ./scripts/cli.js get-series --id CPIAUCSL --units pc1 --frequency a
-node ./scripts/cli.js get-series --id DFF --limit 30 --sort desc
+node <SKILL_DIR>/scripts/cli.js get-series --id GDP
+node <SKILL_DIR>/scripts/cli.js get-series --id UNRATE --start 2020-01-01 --end 2024-12-31
+node <SKILL_DIR>/scripts/cli.js get-series --id CPIAUCSL --units pc1 --frequency a
+node <SKILL_DIR>/scripts/cli.js get-series --id DFF --limit 30 --sort desc
 ```
 
 **Options:**
@@ -94,8 +94,8 @@ node ./scripts/cli.js get-series --id DFF --limit 30 --sort desc
 Use this to understand a series you've found — which category it lives in, which release publishes it, and what tags it carries. Useful for finding related series (search by the same tags, or browse the same release).
 
 ```bash
-node ./scripts/cli.js describe --id UNRATE
-node ./scripts/cli.js describe --id CPIAUCSL
+node <SKILL_DIR>/scripts/cli.js describe --id UNRATE
+node <SKILL_DIR>/scripts/cli.js describe --id CPIAUCSL
 ```
 
 **Options:**
@@ -111,20 +111,20 @@ Use this to explore FRED's structure when you don't have a starting point, enume
 
 ```bash
 # Navigate the category tree
-node ./scripts/cli.js browse --type categories
-node ./scripts/cli.js browse --type categories --category-id 32455
+node <SKILL_DIR>/scripts/cli.js browse --type categories
+node <SKILL_DIR>/scripts/cli.js browse --type categories --category-id 32455
 
 # Find series in a category or release
-node ./scripts/cli.js browse --type category_series --category-id 32455 --limit 20
-node ./scripts/cli.js browse --type release_series --release-id 10
+node <SKILL_DIR>/scripts/cli.js browse --type category_series --category-id 32455 --limit 20
+node <SKILL_DIR>/scripts/cli.js browse --type release_series --release-id 10
 
 # Enumerate releases and sources
-node ./scripts/cli.js browse --type releases --limit 30
-node ./scripts/cli.js browse --type sources
+node <SKILL_DIR>/scripts/cli.js browse --type releases --limit 30
+node <SKILL_DIR>/scripts/cli.js browse --type sources
 
 # Upcoming release calendar (defaults to today onward)
-node ./scripts/cli.js browse --type release_dates --limit 20
-node ./scripts/cli.js browse --type release_dates --start 2026-04-14 --end 2026-04-30
+node <SKILL_DIR>/scripts/cli.js browse --type release_dates --limit 20
+node <SKILL_DIR>/scripts/cli.js browse --type release_dates --start 2026-04-14 --end 2026-04-30
 ```
 
 **Options:**
@@ -155,7 +155,7 @@ Series objects in `seriess` arrays contain: `id`, `title`, `units`, `frequency`,
 For small fetches (a dozen observations, a quick lookup), reading JSON output directly is fine. For anything larger or requiring further processing, redirect output to a temp file:
 
 ```bash
-node ./scripts/cli.js get-series --id GDP --start 2000-01-01 > /tmp/fred_GDP.json
+node <SKILL_DIR>/scripts/cli.js get-series --id GDP --start 2000-01-01 > /tmp/fred_GDP.json
 ```
 
 **When to use a file:**
