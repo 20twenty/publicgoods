@@ -6,6 +6,14 @@ Claude Code skills extend what Claude can do by giving it tools, instructions, a
 
 This collection is growing. Right now it contains one skill: **FRED**, for economic data from the Federal Reserve.
 
+## Install
+
+```bash
+npx skills add 20twenty/publicgoods
+```
+
+Installs all skills in this repo via the [skills.sh](https://skills.sh) ecosystem. Follow the prompts to choose which skills to enable and whether to install at a project or global level.
+
 ---
 
 ## FRED — Federal Reserve Economic Data
@@ -36,23 +44,15 @@ Use this skill when you want to bring real economic data into a conversation. So
 
 Register at [https://fred.stlouisfed.org/docs/api/api_key.html](https://fred.stlouisfed.org/docs/api/api_key.html). It's free and instant.
 
-**2. Install the skill**
-
-```bash
-npx skills add 20twenty/publicgoods
-```
-
-This uses the [skills.sh](https://skills.sh) ecosystem to install all the skills in this repo. Follow the prompts to choose which skills to enable and whether to install at a project or global level.
-
-Alternatively, you can install a single skill from this repo by adding the desired skill like this:
+**2. Install**
 
 ```bash
 npx skills add 20twenty/publicgoods@fred
 ```
 
-**3. Launch Claude with your API key**
+Or install the full collection with `npx skills add 20twenty/publicgoods`.
 
-Some skills require API keys for the underlying data services. Set them in your environment or pass them inline when launching Claude:
+**3. Launch Claude with your API key**
 
 ```bash
 FRED_API_KEY=your_key_here claude
