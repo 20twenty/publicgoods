@@ -30,21 +30,23 @@ Use this skill when you want to bring real economic data into a conversation. So
 
 Register at [https://fred.stlouisfed.org/docs/api/api_key.html](https://fred.stlouisfed.org/docs/api/api_key.html). It's free and instant.
 
-**2. Install**
+**2. Install the skill**
 
 ```bash
 npx skills add 20twenty/publicgoods
 ```
 
-This installs the skill into `.claude/skills/` in your current project. Open the project in Claude Code and the skill is active.
+This uses the [skills.sh](https://skills.sh) ecosystem to install all the skills in this repo. Follow the prompts to choose which skills to enable and whether to install at a project or global level.
 
-Alternatively, clone manually:
+Alternatively, you can install a single skill from this repo by adding the desired skill like this:
 
 ```bash
-git clone https://github.com/20twenty/publicgoods
+npx skills add 20twenty/publicgoods@fred
 ```
 
 **3. Launch Claude with your API key**
+
+Some skills require API keys for the underlying data services. Set them in your environment or pass them inline when launching Claude:
 
 ```bash
 FRED_API_KEY=your_key_here claude
@@ -54,13 +56,25 @@ FRED_API_KEY=your_key_here claude
 
 Just talk to Claude. You don't need to know FRED series IDs, API parameters, or CLI commands — Claude handles all of that. Describe what you want in natural language.
 
-### Example prompts
+## Examples
 
-**Broad, exploratory questions:**
+### With example output
 
-> I'm considering a career change into healthcare. Use FRED data to help me understand the labor market — employment trends, wages, job openings, how it's changed over the last decade.
+> I am considering a career change — use FRED data to help me get perspective as I consider my options.
+
+[→ See example output](examples/example-career-change-labor-market.md)
+
+> Show me the federal funds rate alongside 30-year mortgage rates for the last 10 years. How closely do they track?
+
+[→ See example output](examples/example-fed-funds-vs-mortgage-rates.md)
 
 > I'm trying to understand why my grocery bills feel so different from the official inflation numbers. Can you pull the relevant FRED data and explain what's happening?
+
+[→ See example output](examples/example-grocery-bills-vs-cpi.md)
+
+### More prompts to try
+
+**Broad, exploratory:**
 
 > Give me a macroeconomic snapshot of where the US economy stands right now — growth, inflation, employment, rates. Use the latest FRED data.
 
@@ -73,8 +87,6 @@ Just talk to Claude. You don't need to know FRED series IDs, API parameters, or 
 > Compare US unemployment and inflation over the last 20 years. Where are the major turning points and what caused them?
 
 > How has real wage growth compared to productivity growth since 1980? Pull the data and help me understand the gap.
-
-> Show me the federal funds rate alongside 30-year mortgage rates for the last 10 years. How closely do they track?
 
 > What sectors have seen the strongest employment growth in the last 5 years? Are there any surprises?
 
@@ -90,19 +102,3 @@ Just talk to Claude. You don't need to know FRED series IDs, API parameters, or 
 
 > Search for all FRED series related to small business and give me a summary of what data is available.
 
-## Examples
-
-- [Labor Market Snapshot for Career Changers](examples/example-career-change-labor-market.md) — unemployment, quits rate, wage growth, hiring rate, and recession probability to frame a career change decision
-- [Federal Funds Rate vs. 30-Year Mortgage Rates](examples/example-fed-funds-vs-mortgage-rates.md) — 10-year comparison with ASCII chart, correlation analysis, and breakdown of key divergences
-
-## Project structure
-
-```
-.claude/
-  skills/
-    fred/
-      SKILL.md    ← instructions and context Claude uses when running this skill
-      scripts/
-        cli.js    ← Node.js CLI Claude invokes to query the FRED API
-README.md
-```

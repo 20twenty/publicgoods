@@ -1,12 +1,21 @@
-# FRED Skill Example: Federal Funds Rate vs. 30-Year Mortgage Rates
+# Federal Funds Rate vs. 30-Year Mortgage Rates
 
-> **Query:** *"Show me the federal funds rate alongside 30-year mortgage rates for the last 10 years. How closely do they track?"*
+## Query
 
-**Series used:** `FEDFUNDS`, `MORTGAGE30US`
+> "Show me the federal funds rate alongside 30-year mortgage rates for the last 10 years. How closely do they track?"
 
----
+## FRED Data Series Used
 
-## Chart (2016–2026)
+*Based on the query, Claude selected the following FRED data series to pull and analyze:*
+
+| Series | Description |
+|--------|-------------|
+| `FEDFUNDS` | Federal Funds effective rate — the overnight rate set by the Fed |
+| `MORTGAGE30US` | 30-year fixed mortgage rate (Freddie Mac) — the rate consumers actually pay |
+
+## Output
+
+### Chart (2016–2026)
 
 ```
 Date      FFR    30yr  Spread  (FFR=█  Mortgage=◆)
@@ -31,7 +40,7 @@ Date      FFR    30yr  Spread  (FFR=█  Mortgage=◆)
 
 ---
 
-## Answer: They track each other — but loosely, with important divergences
+### Answer: They track each other — but loosely, with important divergences
 
 **Correlation: 0.932** — strong directional relationship, but the spread is far from constant.
 
@@ -39,7 +48,7 @@ Date      FFR    30yr  Spread  (FFR=█  Mortgage=◆)
 
 ---
 
-## Key Patterns
+### Key Patterns
 
 **1. Normal spread ~2.5%**
 Mortgages typically run 2.5% above the FFR. The long-run average in this dataset is 2.57%.
@@ -58,7 +67,7 @@ FFR at 3.64%, mortgage at 6.18%, spread of +2.54% — back to roughly historical
 
 ---
 
-## The Core Insight
+### The Core Insight
 
 The Fed funds rate and mortgage rates share a strong long-run relationship (r = 0.932), but the *spread* between them reflects how the bond market sees inflation and future Fed policy. When the market is spooked (2022) or slow to believe cuts will stick (2024–2025), mortgages diverge significantly from what the overnight rate alone would predict. **Watching the FFR alone is an incomplete guide to mortgage affordability.**
 
