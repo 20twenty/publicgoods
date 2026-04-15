@@ -1,20 +1,26 @@
-# FRED Skill for Claude Code
+# publicgoods — Claude Code Skills for Public Data
 
-A Claude Code skill that gives Claude direct access to the [Federal Reserve Bank of St. Louis FRED API](https://fred.stlouisfed.org/) — 800,000+ economic time series from the BLS, BEA, Federal Reserve, Census Bureau, IMF, World Bank, and dozens of other sources.
+Skills that give Claude direct access to public datasets and data APIs — so you can ask questions in plain language and get answers grounded in real data, without knowing anything about the underlying APIs.
 
-## What this is
+Claude Code skills extend what Claude can do by giving it tools, instructions, and context it wouldn't otherwise have. The skills in this repo focus on public goods data: the kind that governments, central banks, and international institutions publish openly, but that normally requires knowing what you're looking for to use effectively.
 
-Claude Code skills extend what Claude can do in a project by giving it tools, instructions, and context it wouldn't otherwise have. This skill equips Claude with a lightweight CLI it can run to search for, fetch, and explore FRED economic data. You interact through natural conversation — no knowledge of the FRED API required.
+This collection is growing. Right now it contains one skill: **FRED**, for economic data from the Federal Reserve.
+
+---
+
+## FRED — Federal Reserve Economic Data
+
+A skill that gives Claude direct access to the [Federal Reserve Bank of St. Louis FRED API](https://fred.stlouisfed.org/) — 800,000+ economic time series from the BLS, BEA, Federal Reserve, Census Bureau, IMF, World Bank, and dozens of other sources.
 
 Once installed and configured, you interact with FRED entirely through natural conversation with Claude. Claude handles series discovery, fetching, transformation, and interpretation. You just ask questions.
 
-## Why this exists
+### Why this exists
 
 FRED is one of the most comprehensive public economic datasets in the world, but it requires knowing what you're looking for — specific series IDs, API parameters, transformation options. This skill removes that barrier: Claude knows how to navigate FRED's catalog, apply transformations server-side, and interpret the results in context.
 
 It's useful any time you want data to inform a decision, understand an economic trend, research a topic, or produce analysis — without needing to be an economist or data engineer yourself.
 
-## When to use it
+### When to use it
 
 Use this skill when you want to bring real economic data into a conversation. Some situations where it naturally applies:
 
@@ -24,7 +30,7 @@ Use this skill when you want to bring real economic data into a conversation. So
 - You want a chart, comparison, or analysis of multiple economic indicators over time
 - You're a practitioner who needs specific series, transformations, or time windows pulled quickly
 
-## Setup
+### Setup
 
 **1. Get a free FRED API key**
 
@@ -52,13 +58,13 @@ Some skills require API keys for the underlying data services. Set them in your 
 FRED_API_KEY=your_key_here claude
 ```
 
-## How to use it
+### How to use it
 
 Just talk to Claude. You don't need to know FRED series IDs, API parameters, or CLI commands — Claude handles all of that. Describe what you want in natural language.
 
-## Examples
+### Examples
 
-### With example output
+#### With example output
 
 > I am considering a career change — use FRED data to help me get perspective as I consider my options.
 
@@ -76,7 +82,7 @@ Just talk to Claude. You don't need to know FRED series IDs, API parameters, or 
 
 [→ See example output](examples/example-sector-employment-growth.md)
 
-### More prompts to try
+#### More prompts to try
 
 **Broad, exploratory:**
 

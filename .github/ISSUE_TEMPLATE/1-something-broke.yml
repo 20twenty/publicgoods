@@ -1,0 +1,58 @@
+name: Something didn't work
+description: Claude gave a wrong answer, failed to find data, or something went sideways.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. The more you can tell us about what you were actually trying to do, the more useful it is — we care about the experience, not just the error message.
+
+  - type: textarea
+    id: intent
+    attributes:
+      label: What were you trying to do?
+      description: Describe the question or task in plain terms — what did you actually want to know or accomplish?
+      placeholder: "e.g. I wanted to understand how inflation has tracked against wage growth over the last 10 years"
+    validations:
+      required: true
+
+  - type: textarea
+    id: prompt
+    attributes:
+      label: What did you ask Claude?
+      description: Paste the prompt(s) you used, as close to verbatim as you can.
+      placeholder: "e.g. Show me CPI and average hourly earnings for the last 10 years. How closely do they track?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened?
+      description: What did Claude actually do or say? Wrong data, confident but incorrect answer, error, no response, something else?
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect instead?
+      description: What would a good answer have looked like?
+    validations:
+      required: false
+
+  - type: textarea
+    id: side_effects
+    attributes:
+      label: Any side effects or follow-on weirdness?
+      description: Did the bad answer affect other parts of your conversation? Did Claude double down on a wrong answer? Did it apologize and then do the same thing again?
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else?
+      description: Environment details, Claude version, whether this happens every time or just once, anything else that might be relevant.
+    validations:
+      required: false

@@ -1,0 +1,41 @@
+name: Idea or missing capability
+description: Something you wanted to do that this skill couldn't handle — or an idea for making it more useful.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The most useful ideas come with context about what you were actually trying to accomplish. Help us understand the question, not just the feature.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: What were you trying to figure out or accomplish?
+      description: Describe the underlying question or goal — not the feature you want, but the thing you were actually trying to do.
+      placeholder: "e.g. I wanted to compare housing affordability across different metro areas over time"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened when you tried?
+      description: Did the skill partially work? Did Claude not know how to approach it? Did it fail silently or give you something irrelevant?
+    validations:
+      required: true
+
+  - type: textarea
+    id: ideal_answer
+    attributes:
+      label: What would a good answer have looked like?
+      description: If this skill worked perfectly for your use case, what would it have returned or done?
+    validations:
+      required: false
+
+  - type: textarea
+    id: other
+    attributes:
+      label: Anything else?
+      description: Related datasets, series IDs, or sources you know about that might be relevant. Or just any other context.
+    validations:
+      required: false
