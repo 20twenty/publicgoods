@@ -1,0 +1,16 @@
+{
+  "name": "publicgoods",
+  "owner": {
+    "name": "Brady Benware"
+  },
+  "metadata": {
+    "description": "Claude Code skills for public datasets — economic data, government APIs, and open institutional data sources."
+  },
+  "plugins": [
+    {
+      "name": "fred",
+      "source": "./skills/fred",
+      "description": "Federal Reserve Economic Data — 800,000+ economic time series via natural language"
+    }
+  ]
+}

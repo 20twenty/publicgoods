@@ -1,0 +1,10 @@
+{
+  "name": "fred",
+  "description": "Federal Reserve Economic Data — access 800,000+ economic time series from the FRED API via natural language",
+  "version": "1.0.0",
+  "license": "MIT",
+  "homepage": "https://github.com/20twenty/publicgoods",
+  "repository": "https://github.com/20twenty/publicgoods",
+  "keywords": ["economics", "data", "federal-reserve", "fred", "public-data"],
+  "skills": "./SKILL.md"
+}

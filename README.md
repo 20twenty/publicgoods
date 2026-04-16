@@ -8,11 +8,33 @@ This collection is growing. Right now it contains one skill: **FRED**, for econo
 
 ## Install
 
+This collection is available in two ecosystems — use whichever fits your setup.
+
+**Via [skills.sh](https://skills.sh)** (cross-platform — works with Claude Code, Cursor, Gemini CLI, and others):
+
 ```bash
 npx skills add 20twenty/publicgoods
 ```
 
-Installs all skills in this repo via the [skills.sh](https://skills.sh) ecosystem. Follow the prompts to choose which skills to enable and whether to install at a project or global level.
+Follow the prompts to choose which skills to enable and whether to install at a project or global level.
+
+**Via the Claude Code Marketplace** (Claude Code only):
+
+```
+/plugin marketplace add github:20twenty/publicgoods
+```
+
+Then install all skills:
+
+```
+/plugin install publicgoods
+```
+
+Or install a specific skill:
+
+```
+/plugin install fred@publicgoods
+```
 
 ---
 
@@ -46,11 +68,18 @@ Register at [https://fred.stlouisfed.org/docs/api/api_key.html](https://fred.stl
 
 **2. Install**
 
+Via skills.sh:
+
 ```bash
 npx skills add 20twenty/publicgoods@fred
 ```
 
-Or install the full collection with `npx skills add 20twenty/publicgoods`.
+Via the Claude Code Marketplace:
+
+```
+/plugin marketplace add github:20twenty/publicgoods
+/plugin install fred@publicgoods
+```
 
 **3. Launch Claude with your API key**
 
