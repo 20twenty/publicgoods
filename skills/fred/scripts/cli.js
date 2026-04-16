@@ -4,7 +4,7 @@
 // Commands: search, get-series, browse
 
 const FRED_BASE = 'https://api.stlouisfed.org/fred';
-const API_KEY = process.env.FRED_API_KEY;
+const API_KEY = process.env.CLAUDE_PLUGIN_OPTION_FRED_API_KEY || process.env.FRED_API_KEY;
 if (!API_KEY) {
   console.error('Error: FRED_API_KEY environment variable is not set.');
   process.exit(1);

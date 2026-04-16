@@ -6,5 +6,12 @@
   "homepage": "https://github.com/20twenty/publicgoods",
   "repository": "https://github.com/20twenty/publicgoods",
   "keywords": ["economics", "data", "federal-reserve", "fred", "public-data"],
-  "skills": "./SKILL.md"
+  "skills": "./SKILL.md",
+  "userConfig": {
+    "FRED_API_KEY": {
+      "description": "Your FRED API key. Get one free at https://fred.stlouisfed.org/docs/api/api_key.html",
+      "sensitive": true,
+      "required": true
+    }
+  }
 }
