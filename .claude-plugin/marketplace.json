@@ -11,6 +11,11 @@
       "name": "fred",
       "source": "./skills/fred",
       "description": "Federal Reserve Economic Data — 800,000+ economic time series via natural language"
+    },
+    {
+      "name": "hello",
+      "source": "./skills/hello",
+      "description": "Placeholder — shows where future skills will live in the publicgoods collection"
     }
   ]
 }
