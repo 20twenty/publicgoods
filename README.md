@@ -4,37 +4,15 @@ Skills that give Claude direct access to public datasets and data APIs — so yo
 
 Claude Code skills extend what Claude can do by giving it tools, instructions, and context it wouldn't otherwise have. The skills in this repo focus on public goods data: the kind that governments, central banks, and international institutions publish openly, but that normally requires knowing what you're looking for to use effectively.
 
-This collection is growing. Right now it contains one real skill — **FRED** for economic data from the Federal Reserve — with more on the way.
+This collection is growing. Right now it contains one skill: **FRED**, for economic data from the Federal Reserve.
 
 ## Install
-
-This collection is available in two ecosystems — use whichever fits your setup.
-
-**Via [skills.sh](https://skills.sh)** (cross-platform — works with Claude Code, Cursor, Gemini CLI, and others):
 
 ```bash
 npx skills add 20twenty/publicgoods
 ```
 
-Follow the prompts to choose which skills to enable and whether to install at a project or global level.
-
-**Via the Claude Code Marketplace** (Claude Code only):
-
-```
-/plugin marketplace add github:20twenty/publicgoods
-```
-
-Then install all skills:
-
-```
-/plugin install publicgoods
-```
-
-Or install a specific skill:
-
-```
-/plugin install fred@publicgoods
-```
+Installs all skills in this repo via the [skills.sh](https://skills.sh) ecosystem. Follow the prompts to choose which skills to enable and whether to install at a project or global level.
 
 ---
 
@@ -68,18 +46,11 @@ Register at [https://fred.stlouisfed.org/docs/api/api_key.html](https://fred.stl
 
 **2. Install**
 
-Via skills.sh:
-
 ```bash
 npx skills add 20twenty/publicgoods@fred
 ```
 
-Via the Claude Code Marketplace:
-
-```
-/plugin marketplace add github:20twenty/publicgoods
-/plugin install fred@publicgoods
-```
+Or install the full collection with `npx skills add 20twenty/publicgoods`.
 
 **3. Launch Claude with your API key**
 
@@ -138,28 +109,4 @@ Just talk to Claude. You don't need to know FRED series IDs, API parameters, or 
 > Get the 10-year minus 2-year Treasury spread (T10Y2Y) for the last 5 years and mark the periods where it went negative.
 
 > Search for all FRED series related to small business and give me a summary of what data is available.
-
----
-
-## Hello — Placeholder
-
-A placeholder skill showing where future skills will live in this collection. It has no dependencies, requires no API key, and does nothing useful — it just confirms that skill loading is working and gives you a sense of how new skills will be structured when they arrive.
-
-### Setup
-
-**Via skills.sh:**
-
-```bash
-npx skills add 20twenty/publicgoods@hello
-```
-
-**Via the Claude Code Marketplace:**
-
-```
-/plugin install hello@publicgoods
-```
-
-### How to use it
-
-Type `/hello` in Claude Code. Claude will introduce the skill and explain what's happening.
 
