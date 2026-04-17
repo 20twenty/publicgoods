@@ -1,7 +1,7 @@
 {
   "name": "hello",
   "description": "A placeholder skill showing where future skills will live in the publicgoods collection",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "homepage": "https://github.com/20twenty/publicgoods",
   "repository": "https://github.com/20twenty/publicgoods",
